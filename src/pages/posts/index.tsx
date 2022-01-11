@@ -19,8 +19,6 @@ interface PostsProps {
 }
 
 export default function Posts({ posts }: PostsProps) {
-  const POST_URL = process.env.NEXT_PUBLIC_VERCEL_URL || 'posts';
-
   return (
       <>
         <Head>

@@ -19,8 +19,6 @@ interface PostPreviewProps {
 }
 
 export default function PostPreview({ post }: PostPreviewProps) {
-  const POST_URL = process.env.NEXT_PUBLIC_VERCEL_URL || 'posts';
-
   const { data: session } = useSession();
   const router = useRouter();
 
@@ -47,9 +45,9 @@ export default function PostPreview({ post }: PostPreviewProps) {
           
           <div className={styles.continueReading}>
             Wanna continue reading?
-            <Link href="http://localhost:3000">
+            <Link href="http://localhost:3000/">
               <span>
-                <a href="">subscribe now</a> 🤗
+                <a>subscribe now</a> 🤗
               </span>
             </Link>
           </div>
