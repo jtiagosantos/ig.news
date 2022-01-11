@@ -4,7 +4,6 @@ import { GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
 import { getPrismicClient } from '../../services/prismic';
 import { RichText } from 'prismic-dom';
-import { POST_URL } from '../../config/constants';
 
 import styles from './styles.module.scss';
 
@@ -20,6 +19,8 @@ interface PostsProps {
 }
 
 export default function Posts({ posts }: PostsProps) {
+  const POST_URL = process.env.NEXT_PUBLIC_VERCEL_URL || 'posts';
+
   return (
       <>
         <Head>
