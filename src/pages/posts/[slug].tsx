@@ -3,6 +3,7 @@ import { GetServerSideProps } from 'next';
 import { getSession } from 'next-auth/react';
 import { RichText } from 'prismic-dom';
 import { getPrismicClient } from '../../services/prismic';
+import { HOME_URL } from '../../config/constants';
 
 import styles from './post.module.scss';
 
@@ -43,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
   if(!session?.activeSubscription) {
     return {
       redirect: {
-        destination: '/',
+        destination: HOME_URL,
         permanent: false,
       }
     }

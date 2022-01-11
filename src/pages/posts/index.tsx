@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Prismic from '@prismicio/client';
+import Link from 'next/link';
 import { GetStaticProps } from 'next';
+import Prismic from '@prismicio/client';
 import { getPrismicClient } from '../../services/prismic';
 import { RichText } from 'prismic-dom';
-import Link from 'next/link';
 
 import styles from './styles.module.scss';
 
@@ -19,6 +19,8 @@ interface PostsProps {
 }
 
 export default function Posts({ posts }: PostsProps) {
+  const POST_URL = process.env.NEXT_PUBLIC_VERCEL_URL || 'posts';
+
   return (
       <>
         <Head>
@@ -28,7 +30,7 @@ export default function Posts({ posts }: PostsProps) {
         <main className={styles.container}>
           <div className={styles.posts}>
             {posts.map(post => (
-              <Link href={`/posts/${post.slug}`} key={post.slug}>
+              <Link href={`/${POST_URL}/${post.slug}`} key={post.slug}>
                 <a>
                   <time>{post.updatedAt}</time>
                   <strong>{post.title}</strong>

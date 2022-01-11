@@ -2,6 +2,7 @@ import { useSession, signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { api } from '../../services/api';
 import { getStripeJs } from '../../services/stripe-js';
+import { POST_URL } from '../../config/constants';
 
 import styles from './styles.module.scss';
 
@@ -20,7 +21,7 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
     }
 
     if(session.activeSubscription) {
-      router.push('/posts')
+      router.push(POST_URL)
       return
     }
 
