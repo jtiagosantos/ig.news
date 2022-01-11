@@ -43,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
   if(!session?.activeSubscription) {
     return {
       redirect: {
-        destination: '/',
+        destination: 'http://localhost:3000/',
         permanent: false,
       }
     }
