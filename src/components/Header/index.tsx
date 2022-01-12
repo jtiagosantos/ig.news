@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { ActiveLink } from '../ActiveLink';
+import { POST_URL, HOME_URL } from '../../config/constants';
 
 import { SignInButton } from '../SignInButton';
 
@@ -11,10 +11,10 @@ export function Header() {
       <div className={styles.headerContent}>
         <img src="/images/logo.svg" alt="ig.news" />
         <nav>
-          <ActiveLink activeClassName={styles.active} href="/">
+          <ActiveLink activeClassName={styles.active} href="http://localhost:3000/">
             <a>Home</a>
           </ActiveLink>
-          <ActiveLink activeClassName={styles.active} href="/posts" prefetch>
+          <ActiveLink activeClassName={styles.active} href="http://localhost:3000/posts" prefetch>
             <a>Posts</a>
           </ActiveLink>
         </nav>
