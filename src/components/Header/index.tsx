@@ -1,7 +1,6 @@
 import { ActiveLink } from '../ActiveLink';
-import { POST_URL, HOME_URL } from '../../config/constants';
-
 import { SignInButton } from '../SignInButton';
+import { HOME_URL } from '../../config/constants';
 
 import styles from './styles.module.scss';
 
@@ -11,7 +10,7 @@ export function Header() {
       <div className={styles.headerContent}>
         <img src="/images/logo.svg" alt="ig.news" />
         <nav>
-          <ActiveLink activeClassName={styles.active} href="http://localhost:3000/">
+          <ActiveLink activeClassName={styles.active} href={HOME_URL}>
             <a>Home</a>
           </ActiveLink>
           <ActiveLink activeClassName={styles.active} href="http://localhost:3000/posts" prefetch>
