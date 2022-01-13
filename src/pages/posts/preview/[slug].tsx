@@ -24,7 +24,7 @@ export default function PostPreview({ post }: PostPreviewProps) {
 
   useEffect(() => {
     if(session?.activeSubscription) {
-      router.push(`http://localhost:3000/posts/${post.slug}`);
+      router.push(`/posts/${post.slug}`);
     }
   }, [session]);
 
@@ -45,7 +45,7 @@ export default function PostPreview({ post }: PostPreviewProps) {
           
           <div className={styles.continueReading}>
             Wanna continue reading?
-            <Link href="http://localhost:3000/">
+            <Link href="/">
               <span>
                 <a>subscribe now</a> 🤗
               </span>
