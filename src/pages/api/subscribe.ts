@@ -56,8 +56,8 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
       ],
       mode: 'subscription',
       allow_promotion_codes: true,
-      success_url: process.env.STRIPE_SUCCESS_URL,
-      cancel_url: process.env.STRIPE_CANCEL_URL,
+      success_url: process.env.NEXT_PUBLIC_STRIPE_SUCCESS_URL,
+      cancel_url: process.env.NEXT_PUBLIC_STRIPE_CANCEL_URL,
     })
 
     return res.status(200).json({ sessionId: stripeCheckoutSession.id });
