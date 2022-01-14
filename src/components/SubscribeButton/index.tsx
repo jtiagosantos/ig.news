@@ -20,7 +20,7 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
     }
 
     if(session.activeSubscription) {
-      router.push('http://localhost:3000/posts')
+      router.push('/posts')
       return
     }
 
