@@ -115,7 +115,7 @@ You can view the project layout through the link below:
 
 <hr>
 
-## ☁️ Deploy
+## :cloud: Deploy
 
 - **[Ignews](https://ig-news-seven-self.vercel.app/)**
 
