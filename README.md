@@ -85,11 +85,18 @@ PRISMIC_ENDPOINT= xxxxxxxxxxxxx
 PRISMIC_ACCESS_TOKEN= xxxxxxxxxxxxx
 ```
 
-4️⃣ Start project:
+4️⃣ Run tests:
+
+```bash
+$ yarn test ou npm run test
+```
+
+5️⃣ Start project:
 
 ```bash
 $ yarn dev ou npm run dev
 ```
+
 <hr>
 
 ## 🛠 Technologies
@@ -104,6 +111,8 @@ The following tools were used in the construction of project:
 - **[Prismic](https://prismic.io/)**
 - **[Stripe](https://stripe.com/docs)**
 - **[Github OAuth](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps)**
+- **[Jest](https://jestjs.io/pt-BR/)**
+- **[React Testing Library](https://testing-library.com/)**
 
 <hr>
 
